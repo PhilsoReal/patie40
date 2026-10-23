@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Manrope:wght@500;600;700&display=swap");
+
+
+:root {
+  --brown: #715a4a;
+  --brown-dark: #3f3028;
+  --taupe: #9b8372;
+  --ivory: #f8f3eb;
+  --paper: #fffdf9;
+  --rose-gold: #b89776;
+}
+
+* { box-sizing: border-box; }
+html { background: #2b231f; }
+body { margin: 0; color: var(--brown-dark); font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif; }
+button, a { font: inherit; }
+
+.stage {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 22px;
+  background: radial-gradient(circle at 50% 15%, #8f7969 0, #4d3e35 38%, #241d19 100%);
+}
+
+.invitation {
+  width: min(100%, 430px);
+  min-height: min(820px, calc(100svh - 44px));
+  position: relative;
+  overflow: hidden;
+  background: var(--paper);
+  box-shadow: 0 30px 80px #150f0caa;
+  animation: card-in .65s cubic-bezier(.22,.75,.2,1) both;
+}
+
+.floral-hero, .details-hero {
+  position: relative;
+  background-image: linear-gradient(#503e3038, #503e300d), url("./floral-invitation-bg.png");
+  background-size: cover;
+  background-position: center top;
+}
+
+.floral-hero { height: 470px; padding: 42px 30px; }
+.details-hero { height: 325px; padding: 34px 28px; background-position: center 2%; }
+
+.topline {
+  margin: 0;
+  color: #fffaf1;
+  font: 700 .75rem/1.4 "Manrope", Arial, sans-serif;
+  letter-spacing: .24em;
+  text-align: center;
+}
+
+.occasion { margin: 14px 0 0; color: white; font-size: 1.35rem; font-weight: 600; letter-spacing: .13em; text-align: center; text-transform: uppercase; }
+.forty { margin: -9px 0 0; color: #fff; font: 400 5.7rem/.86 "Allura", "Snell Roundhand", cursive; text-align: center; text-shadow: 0 2px 10px #42302777; }
+.forty.small { font-size: 4rem; }
+
+.cover-portrait, .portrait {
+  position: absolute;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 5px solid rgba(255,255,255,.95);
+  box-shadow: 0 12px 32px #402f2670;
+  background: #251e1a;
+}
+.cover-portrait { width: 170px; height: 170px; left: 26px; bottom: 26px; }
+.portrait { width: 142px; height: 142px; left: 28px; bottom: -35px; z-index: 4; }
+.cover-portrait img, .portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center 24%; }
+
+.cover-sheet, .info-sheet { position: relative; z-index: 2; text-align: center; background: var(--paper); }
+.cover-sheet { min-height: 350px; margin-top: -28px; padding: 52px 34px 28px; border-radius: 52% 52% 0 0 / 34px 34px 0 0; }
+.info-sheet { margin-top: -18px; padding: 66px 30px 32px; border-radius: 52% 52% 0 0 / 28px 28px 0 0; }
+
+.honour { margin: 0 0 8px; color: var(--brown); font: 700 .75rem/1.5 "Manrope", Arial, sans-serif; letter-spacing: .18em; }
+h1 { margin: 0; color: var(--brown); font: 400 5rem/.85 "Allura", "Snell Roundhand", cursive; }
+.cover-copy, .message { color: #76665b; font-size: 1.12rem; font-weight: 500; line-height: 1.5; }
+.cover-copy { margin: 19px auto 24px; max-width: 310px; }
+.message { margin: 17px 0 18px; }
+
+.open-button, .actions a {
+  min-height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  font: 700 .75rem/1.2 "Manrope", Arial, sans-serif;
+  letter-spacing: .1em;
+}
+.open-button { width: 230px; color: white; background: var(--brown); box-shadow: 0 9px 22px #60493a4a; }
+.open-button:hover, .primary:hover { background: #574337; }
+
+.back { position: absolute; z-index: 6; top: 20px; left: 20px; width: 42px; height: 42px; border-radius: 50%; border: 1px solid #ffffffaa; color: white; background: #4a382d8c; cursor: pointer; }
+.secret-note { margin: 0 0 20px; padding: 14px 15px; text-align: left; color: #664b3d; background: #efe4d8; border-left: 4px solid var(--rose-gold); font-size: 1.08rem; font-weight: 500; line-height: 1.45; }
+.secret-note strong { color: #51382e; }
+
+.event-grid { display: grid; grid-template-columns: 1fr 1fr 1.25fr; border-block: 1px solid #d9cbc0; }
+.event-grid div { min-width: 0; padding: 16px 7px; display: flex; flex-direction: column; justify-content: center; }
+.event-grid div + div { border-left: 1px solid #d9cbc0; }
+.event-grid strong { color: var(--brown-dark); font: 700 1.05rem/1.2 "Manrope", Arial, sans-serif; }
+.event-grid span { color: var(--brown); font: 700 .8rem/1.5 "Manrope", Arial, sans-serif; }
+.event-grid small { margin-top: 3px; color: #8e7d71; font: 700 .7rem/1.2 "Manrope", Arial, sans-serif; letter-spacing: .08em; }
+
+.venue-address { margin: 18px 0 0; color: #756459; font-size: 1rem; font-weight: 500; line-height: 1.45; }
+.family-note { margin: 18px 0 0; color: #756459; font-size: 1.08rem; font-weight: 500; }
+.actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
+.actions a { padding: 8px 12px; }
+.secondary { color: var(--brown); border: 1px solid var(--brown) !important; background: white; }
+.primary { color: white; background: var(--brown); }
+.rsvp-contact { margin: 14px 0 0; color: #746258; font: 600 .86rem/1.4 "Manrope", Arial, sans-serif; }
+.closing { margin: 18px 0 0; color: var(--brown); font-size: 1.05rem; font-style: italic; font-weight: 500; }
+.draft-label { margin: 22px 0 0; color: #9a897d; font: 700 .7rem/1.4 "Manrope", Arial, sans-serif; letter-spacing: .12em; }
+
+@keyframes card-in { from { opacity: 0; transform: translateY(22px) scale(.985); } to { opacity: 1; transform: none; } }
+@media (max-width: 370px) {
+  .stage { padding: 0; }
+  .invitation { min-height: 100svh; }
+  .floral-hero { height: 430px; padding-inline: 20px; }
+  .cover-portrait { width: 150px; height: 150px; left: 18px; }
+  .info-sheet { padding-inline: 20px; }
+  h1 { font-size: 4.3rem; }
+  .actions { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) { .invitation { animation: none; } }
+
+[hidden] { display: none !important; }
+body { line-height: 1.5; -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; }
+button:focus-visible, a:focus-visible { outline: 3px solid #b89776; outline-offset: 4px; }
