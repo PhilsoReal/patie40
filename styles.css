@@ -132,3 +132,18 @@ h1 { margin: 0; color: var(--brown); font: 400 5rem/.85 "Allura", "Snell Roundha
 body { line-height: 1.5; -webkit-font-smoothing: antialiased; }
 img { display: block; max-width: 100%; }
 button:focus-visible, a:focus-visible { outline: 3px solid #90595d; outline-offset: 4px; }
+
+/* Guest dress guidance */
+.dress-code { margin: 24px 0 0; padding: 22px 16px; border: 1px solid #d7cacc; border-radius: 16px; background: #f5edef; }
+.dress-code h2, .dress-code h3 { margin: 0; color: #661f2b; font: 700 .76rem/1.5 "Manrope", Arial, sans-serif; text-transform: uppercase; letter-spacing: .14em; }
+.dress-style { margin: 8px 0 0; color: #40292f; font-size: 1.65rem; font-weight: 600; line-height: 1.25; }
+.dress-rule { margin: 6px 0 20px; color: #62575a; font-size: 1.08rem; line-height: 1.4; }
+.colour-palette { list-style: none; padding: 0; margin: 14px 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px 8px; }
+.colour-palette li { display: flex; flex-direction: column; align-items: center; gap: 7px; min-width: 0; color: #584b50; font: 600 .7rem/1.4 "Manrope", Arial, sans-serif; }
+.colour-dot { display: block; width: 36px; height: 36px; border-radius: 50%; border: 1px solid #00000018; box-shadow: 0 2px 5px #30282a12; }
+.light-grey { background: #b8b5b2; }
+.grey { background: #8c9089; }
+.dusty-rose { background: #90595d; }
+.burgundy { background: #511d23; }
+.forest-green { background: #232d27; }
+.black { background: #0b0b0b; }
